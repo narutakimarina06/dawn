@@ -132,7 +132,12 @@ class FacetFiltersForm extends HTMLElement {
         FacetFiltersForm.renderCounts(countsToRender, event.target.closest('.js-filter'));
         FacetFiltersForm.renderMobileCounts(countsToRender, document.getElementById(closestJSFilterID));
 
-        const newElementToActivate = document.getElementById(currentActiveID);
+        const newElementSelector = document
+          .getElementById(closestJSFilterID)
+          .classList.contains('mobile-facets__details')
+          ? `#${closestJSFilterID} .mobile-facets__close-button`
+          : `#${closestJSFilterID} .facets__summary`;
+        const newElementToActivate = document.querySelector(newElementSelector);
         if (newElementToActivate) newElementToActivate.focus();
       }
     }
