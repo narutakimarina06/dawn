@@ -67,7 +67,8 @@ class QuickOrderList extends HTMLElement {
       add: 'ADD',
       update: 'UPDATE'
     }
-    this.quickOrderListId = 'quick-order-list'
+    this.id = this.dataset.id
+    this.quickOrderListId = `${this.id}`
     this.variantItemStatusElement = document.getElementById('shopping-cart-variant-item-status');
     const form = this.querySelector('form');
 
@@ -376,7 +377,6 @@ class QuickOrderList extends HTMLElement {
   toggleLoading(id, enable) {
     const quickOrderList = document.getElementById(this.quickOrderListId);
     const quickOrderListItems = this.querySelectorAll(`#Variant-${id} .loading-overlay`);
-
     if (enable) {
       quickOrderList.classList.add('quick-order-list__container--disabled');
       [...quickOrderListItems].forEach((overlay) => overlay.classList.remove('hidden'));
