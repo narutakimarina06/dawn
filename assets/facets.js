@@ -126,7 +126,6 @@ class FacetFiltersForm extends HTMLElement {
 
     if (countsToRender) {
       const closestJSFilterID = event.target.closest('.js-filter').id;
-      const currentActiveID = document.activeElement.id;
 
       if (closestJSFilterID) {
         FacetFiltersForm.renderCounts(countsToRender, event.target.closest('.js-filter'));

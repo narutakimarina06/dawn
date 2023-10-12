@@ -136,9 +136,9 @@
                           {%- endif -%}
                         </span>
                         {%- if filter_type == 'vertical' and filter.operator == 'AND' -%}
-                          <div class="facets__and-helptext">
+                          <span class="facets__and-helptext">
                             {{ 'products.facets.filter_and_operator_subtitle' | t }}
-                          </div>
+                          </span>
                         {%- endif -%}
                         {% render 'icon-caret' %}
                       </div>
@@ -174,9 +174,9 @@
                         >
                           {%- liquid
                             assign sorted_values = filter.values
-                            assign active_filter_values = filter.values | where: 'active', true
                             # Keep the selected values grouped together when operator is AND
                             if filter.operator == 'AND'
+                              assign active_filter_values = filter.values | where: 'active', true
                               assign inactive_filter_values = filter.values | where: 'active', false
                               assign sorted_values = active_filter_values | concat: inactive_filter_values
                             endif
@@ -686,9 +686,9 @@
                           <ul class="mobile-facets__list list-unstyled" role="list">
                             {%- liquid
                               assign sorted_values = filter.values
-                              assign active_filter_values = filter.values | where: 'active', true
                               # Keep the selected values grouped together when operator is AND
                               if filter.operator == 'AND'
+                                assign active_filter_values = filter.values | where: 'active', true
                                 assign inactive_filter_values = filter.values | where: 'active', false
                                 assign sorted_values = active_filter_values | concat: inactive_filter_values
                               endif
