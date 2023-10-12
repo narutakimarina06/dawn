@@ -24,7 +24,8 @@
   overflow: hidden;
 }
 
-.visual-display-parent {
+.visual-display-parent .visual-display--style-swatch,
+.visual-display-parent--thumbnail {
   outline-offset: 0.2rem;
 }
 
@@ -92,8 +93,8 @@
   transform-origin: left;
 }
 
-.visual-display > * {
-  display: block !important;
+.visual-display .visual-display__child {
+  display: block;
   height: 100%;
   width: 100%;
 }

@@ -306,6 +306,10 @@
   align-items: flex-start;
 }
 
+.facets-layout-grid .visual-display--style-thumbnail {
+  --visual-display__size: 100%;
+}
+
 .facets__item label,
 .facets__item input[type='checkbox'] {
   cursor: pointer;
@@ -975,16 +979,6 @@ input.mobile-facets__checkbox {
   margin-right: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 1.5rem;
-}
-
-.mobile-facets .facets-layout-grid--thumbnail {
-  margin: 0 auto;
-  width: min-content;
-  max-width: 100%;
-}
-
-.mobile-facets .visual-display--style-thumbnail {
-  --visual-display__size: 9rem;
 }
 
 .visual-display-parent {
