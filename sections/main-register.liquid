@@ -49,6 +49,22 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+
+    <div class="field">
+      <input
+        type="text"
+        name="customer[last_name]"
+        id="RegisterForm-LastName"
+        {% if form.last_name %}
+          value="{{ form.last_name }}"
+        {% endif %}
+        autocomplete="family-name"
+        placeholder="{{ 'customer.register.last_name' | t }}"
+      >
+      <label for="RegisterForm-LastName">
+        {{ 'customer.register.last_name' | t }}
+      </label>
+    </div>
     <div class="field">
       <input
         type="text"
@@ -67,16 +83,12 @@
     <div class="field">
       <input
         type="text"
-        name="customer[last_name]"
-        id="RegisterForm-LastName"
-        {% if form.last_name %}
-          value="{{ form.last_name }}"
-        {% endif %}
-        autocomplete="family-name"
-        placeholder="{{ 'customer.register.last_name' | t }}"
+        name="customer[note]"
+        id="RegisterForm-Note"
+        placeholder="顧客の追加情報"
       >
-      <label for="RegisterForm-LastName">
-        {{ 'customer.register.last_name' | t }}
+      <label for="RegisterForm-Note">
+        顧客の追加情報
       </label>
     </div>
     <div class="field">
