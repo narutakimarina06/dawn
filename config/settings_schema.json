@@ -109,15 +109,16 @@
         "content": "t:settings_schema.typography.settings.header__1.content"
       },
       {
-        "type": "textarea",
+        "type": "font_picker",
         "id": "type_header_font",
-        "label": "見出しフォント設定",
-        "info": "この欄に入力されたfont-familyをフォント設定に追加します。"
+        "default": "assistant_n4",
+        "label": "t:settings_schema.typography.settings.type_header_font.label",
+        "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
       {
         "type": "range",
         "id": "heading_scale",
-        "min": 75,
+        "min": 100,
         "max": 150,
         "step": 5,
         "unit": "%",
@@ -134,12 +135,6 @@
         "default": "assistant_n4",
         "label": "t:settings_schema.typography.settings.type_body_font.label",
         "info": "t:settings_schema.typography.settings.type_body_font.info"
-      },
-      {
-        "type": "textarea",
-        "id": "type_body_jp_font",
-        "label": "日本語フォント設定",
-        "info": "この欄に入力されたfont-familyをフォント設定に追加します。"
       },
       {
         "type": "range",

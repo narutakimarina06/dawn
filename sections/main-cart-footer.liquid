@@ -31,12 +31,6 @@
             placeholder="{{ 'sections.cart.note' | t }}"
           >{{ cart.note }}</textarea>
         </cart-note>
-
-        <!-- <p class="cart-attribute__field">
-          <input type="hidden" name="attributes[無料ラッピング希望]" value="No">
-          <input type="checkbox" name="attributes[無料ラッピング希望]" form="cart" value="Yes"{% if cart.attributes["無料ラッピング希望"] == "Yes" %} checked{% endif %}>
-          <label>無料ラッピング希望</label>
-        </p> -->
       {%- endif -%}
 
       <div class="cart__blocks">
@@ -44,12 +38,6 @@
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
-            {% when 'wrapping' %}
-                <p class="cart-attribute__field">
-                  <input type="hidden" name="attributes[無料ラッピング希望]" value="No">
-                  <input type="checkbox" name="attributes[無料ラッピング希望]" form="cart" value="Yes"{% if cart.attributes["無料ラッピング希望"] == "Yes" %} checked{% endif %}>
-                  <label>無料ラッピング希望</label>
-                </p>
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div>
@@ -167,10 +155,6 @@
     }
   ],
   "blocks": [
-    {
-      "type": "wrapping",
-      "name":"無料ラッピング"
-    },
     {
       "type": "subtotal",
       "name": "t:sections.main-cart-footer.blocks.subtotal.name",

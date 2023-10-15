@@ -27,11 +27,10 @@
           "settings": {
           }
         },
-        "d6cc326f-3d63-47e9-bc80-c853ecae0247": {
-          "type": "text",
+        "9a6cedaa-f866-4350-8984-e213d66c2394": {
+          "type": "release_date",
           "settings": {
-            "text": "発売日{{ product.metafields.release.day | metafield_tag }}",
-            "text_style": "body"
+            "text": "発売日"
           }
         },
         "variant_picker": {
@@ -40,20 +39,20 @@
             "picker_type": "button"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
+        "365ce09b-be15-4a42-8383-f356b814b246": {
+          "type": "rating",
           "settings": {
           }
         },
-        "acbd2189-6b58-42ca-918c-cceadce164a6": {
-          "type": "lineitem",
+        "quantity_selector": {
+          "type": "quantity_selector",
           "settings": {
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false,
+            "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
         },
@@ -103,6 +102,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "f2189225-21f1-4f36-a95f-2b3115d4b991": {
+          "type": "release_date",
+          "settings": {
+            "text": "発売日{{ product.metafields.release.day | metafield_text }}"
+          }
         }
       },
       "block_order": [
@@ -110,17 +115,18 @@
         "title",
         "caption",
         "price",
-        "d6cc326f-3d63-47e9-bc80-c853ecae0247",
+        "9a6cedaa-f866-4350-8984-e213d66c2394",
         "variant_picker",
+        "365ce09b-be15-4a42-8383-f356b814b246",
         "quantity_selector",
-        "acbd2189-6b58-42ca-918c-cceadce164a6",
         "buy_buttons",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "f2189225-21f1-4f36-a95f-2b3115d4b991"
       ],
       "settings": {
         "enable_sticky_info": true,
